@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume · James Van Nguyen</title>
+<meta name="description" content="Kubernetes, Rancher, and DevSecOps articles by James Van Nguyen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<script>
+  try { document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark"; }
+  catch { document.documentElement.dataset.theme = "dark"; }
+</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <a class="monogram" href="./" aria-label="Home">JN</a>
+  <p class="name"><a href="./">James Van Nguyen</a></p>
+  <p class="role">Kubernetes Escalation Engineer</p>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="./">Articles</a></li>
+      <li><a href="resume.html" aria-current="page">Resume</a></li>
+      <li><a href="https://github.com/jamesvnguyen/k8s-tooling-101">Training repo</a></li>
+    </ul>
+  </nav>
+  <ul class="social">
+    <li><a href="https://github.com/jamesvnguyen">GitHub</a></li>
+    <li><a href="https://linkedin.com/in/jamesvnguyen">LinkedIn</a></li>
+    <li><a href="mailto:jamesvannguyen@outlook.com">Email</a></li>
+  </ul>
+  <button class="theme-toggle" type="button" id="theme-toggle">Light mode</button>
+</aside>
+<main class="content">
+  <header class="page-head">
+    <h1>Resume</h1>
+    <p class="lede">Kubernetes Escalation Engineer · <a href="James_Nguyen_Resume.pdf" download>Download Resume</a></p>
+  </header>
+<section aria-labelledby="profile">
+  <h2 class="section-title" id="profile" style="margin-top:0">Profile</h2>
+  <p>7+ years in DevSecOps, Rancher / RKE2, and AWS. I resolve high-severity production Kubernetes issues for 50+ enterprise customers in healthcare, finance, and energy.</p>
+</section>
+
+<section aria-labelledby="experience">
+  <h2 class="section-title" id="experience">Experience</h2>
+
+  <div class="job">
+    <p class="company">SUSE</p>
+    <p class="meta">Los Angeles, CA</p>
+
+    <div class="role-block">
+      <h3>Kubernetes Escalation Engineer</h3>
+      <p class="when">Sept 2026 – Present</p>
+      <ul class="points">
+        <li>Technical escalation point for high-severity Kubernetes and Rancher issues, running root cause analysis across networking, etcd, control plane, and workloads while meeting SLAs.</li>
+        <li>Diagnose performance degradation, node instability, and CNI, DNS, and ingress failures in production Rancher / RKE2 environments.</li>
+        <li>Reproduce and document product defects with engineering, write knowledge base articles and runbooks, and mentor support engineers.</li>
+      </ul>
+    </div>
+
+    <div class="role-block">
+      <h3>Kubernetes Support Engineer</h3>
+      <p class="when">May 2024 – Sept 2026</p>
+      <ul class="points">
+        <li>Supported 50+ enterprise customers on RKE, RKE2, K3s, and EKS, advising on HA, security hardening, RBAC, and network segmentation.</li>
+        <li>Guided customers through CIS benchmark hardening for RKE2 and NeuVector deployments for vulnerability scanning and runtime protection.</li>
+        <li>Helped customers adopt GitOps, infrastructure as code, secrets management, and observability with Prometheus and Grafana.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <p class="company">Eviden</p>
+    <p class="meta">Chicago, IL</p>
+    <div class="role-block">
+      <h3>Senior DevOps Engineer</h3>
+      <p class="when">Sept 2021 – June 2024</p>
+      <ul class="points">
+        <li>Architected a Terraform / Rancher deployment that saved a financial institution over $500K in AWS costs.</li>
+        <li>Built a Jenkins CI/CD pipeline with SonarQube scanning that cut deployment time in half.</li>
+        <li>Helped migrate a medical institution from Terraform Enterprise to Crossplane for automated GCP provisioning.</li>
+        <li>Integrated ArgoCD with Azure DevOps for a GitOps delivery workflow with faster rollbacks.</li>
+        <li>Expanded HashiCorp Vault and deployed the Vault Sidecar Injector via Helm to integrate Kubernetes clusters.</li>
+        <li>Built reusable Terraform modules and a private registry for provisioning AWS resources across teams.</li>
+        <li>Mentored junior engineers and wrote 20+ technical guides that onboarded 15+ teams to Terraform, Kubernetes, and Vault.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <p class="company">Nexient</p>
+    <p class="meta">Ann Arbor, MI</p>
+    <div class="role-block">
+      <h3>DevOps Engineer II</h3>
+      <p class="when">Jan 2019 – Sept 2021</p>
+      <ul class="points">
+        <li>Built a fault-tolerant, highly available multi-cloud Azure / AWS deployment system for a gas and energy company.</li>
+        <li>Automated self-service frontend releases with Bash, Python, AWS CodeBuild, and CodePipeline.</li>
+        <li>Automated CloudFront and S3 site management with CloudFormation and Lambda, including Lambda@Edge redirects.</li>
+        <li>Implemented Elasticsearch and Kibana for real-time server monitoring and troubleshooting.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="skills">
+  <h2 class="section-title" id="skills">Skills</h2>
+  <dl class="skills">
+    <dt>Kubernetes</dt><dd>Kubernetes, Rancher, RKE2, K3s, EKS, Helm, Kustomize</dd>
+    <dt>Cloud</dt><dd>AWS, GCP</dd>
+    <dt>Infrastructure as code</dt><dd>Terraform, Sentinel, CloudFormation, Crossplane</dd>
+    <dt>CI/CD</dt><dd>ArgoCD, GitOps, Jenkins, Azure DevOps, AWS CodePipeline</dd>
+    <dt>Security</dt><dd>NeuVector, Kubewarden, Trivy, SonarQube, AWS GuardDuty, AWS WAF</dd>
+    <dt>Secrets</dt><dd>HashiCorp Vault, AWS Secrets Manager, AWS Parameter Store</dd>
+    <dt>Observability</dt><dd>Prometheus, Grafana, Elasticsearch, Kibana</dd>
+    <dt>Registries</dt><dd>Harbor, JFrog Artifactory</dd>
+    <dt>Config management</dt><dd>Ansible, Chef</dd>
+    <dt>Linux &amp; scripting</dt><dd>SLES, RHEL, Ubuntu, Bash, Python</dd>
+    <dt>Compliance</dt><dd>DevSecOps, HIPAA, PCI DSS</dd>
+  </dl>
+</section>
+
+<section aria-labelledby="certs">
+  <h2 class="section-title" id="certs">Certifications</h2>
+  <ul class="plain">
+    <li>Certified Kubernetes Administrator (CKA)</li>
+    <li>Kubernetes and Cloud Native Security Associate (KCSA)</li>
+    <li>Kubernetes and Cloud Native Associate (KCNA)</li>
+    <li>HashiCorp Certified: Terraform Associate</li>
+    <li>AWS Certified Cloud Practitioner</li>
+  </ul>
+</section>
+
+<section aria-labelledby="education">
+  <h2 class="section-title" id="education">Education</h2>
+  <p><strong>University of Michigan</strong><br>B.S. Biomolecular Science and English Language and Literature</p>
+</section>
+
+</main>
+</div>
+<script src="assets/site.js"></script>
+</body>
+</html>

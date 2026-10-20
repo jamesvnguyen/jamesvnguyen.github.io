@@ -3,225 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>James Van Nguyen – Kubernetes Escalation Engineer</title>
-<meta name="description" content="Kubernetes Escalation Engineer with 7+ years in DevSecOps, Rancher / RKE2, and AWS.">
+<title>James Van Nguyen – Articles</title>
+<meta name="description" content="Kubernetes, Rancher, and DevSecOps articles by James Van Nguyen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #ffffff;
-    --ink: #1d2433;
-    --muted: #5b6475;
-    --accent: #1f5f8b;
-    --rule: #dfe3ea;
-    --soft: #f3f6f9;
-    color-scheme: light;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #161c26;
-      --ink: #e4e8ef;
-      --muted: #9aa3b2;
-      --accent: #7fb6dd;
-      --rule: #2c3544;
-      --soft: #1d2531;
-      color-scheme: dark;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font: 400 1rem/1.6 "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  }
-  main { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
-  a { color: var(--accent); text-underline-offset: 3px; }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-
-  header { margin-bottom: 2.75rem; }
-  h1 {
-    font: 600 clamp(2.2rem, 6vw, 3rem)/1.1 "Literata", Georgia, serif;
-    margin: 0 0 .4rem;
-    letter-spacing: -.01em;
-  }
-  .title { font-size: 1.15rem; color: var(--muted); margin: 0 0 1.1rem; }
-  .links { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; margin: 0; padding: 0; list-style: none; }
-  .links a { font-weight: 500; }
-
-  section { margin-top: 2.5rem; }
-  h2 {
-    font: 600 1.35rem/1.3 "Literata", Georgia, serif;
-    margin: 0 0 1rem;
-    padding-bottom: .4rem;
-    border-bottom: 1px solid var(--rule);
-  }
-  p { margin: 0 0 1rem; }
-
-  /* Experience timeline */
-  .job { position: relative; padding-left: 1.5rem; padding-bottom: 1.75rem; border-left: 2px solid var(--rule); }
-  .job:last-child { padding-bottom: 0; }
-  .job::before {
-    content: ""; position: absolute; left: -7px; top: .45rem;
-    width: 12px; height: 12px; border-radius: 50%;
-    background: var(--bg); border: 2px solid var(--accent);
-  }
-  .company { font-weight: 600; font-size: 1.1rem; margin: 0; }
-  .meta { color: var(--muted); font-size: .92rem; margin: 0 0 .75rem; }
-  .role { margin-top: 1rem; }
-  .role:first-of-type { margin-top: 0; }
-  .role h3 { font-size: 1rem; font-weight: 600; margin: 0; }
-  .role .when { color: var(--muted); font-size: .92rem; margin: 0 0 .5rem; }
-  ul.points { margin: 0; padding-left: 1.1rem; }
-  ul.points li { margin-bottom: .4rem; }
-  ul.points li::marker { color: var(--muted); }
-
-  /* Skills */
-  dl.skills { display: grid; grid-template-columns: 11rem 1fr; gap: .55rem 1.25rem; margin: 0; }
-  dl.skills dt { font-weight: 600; color: var(--muted); font-size: .95rem; }
-  dl.skills dd { margin: 0; }
-  @media (max-width: 560px) {
-    main { padding-top: 2.5rem; }
-    dl.skills { grid-template-columns: 1fr; gap: .1rem; }
-    dl.skills dd { margin-bottom: .7rem; }
-  }
-
-  .project { background: var(--soft); border-radius: 6px; padding: 1rem 1.25rem; }
-  .project p:last-child { margin-bottom: 0; }
-
-  ul.plain { margin: 0; padding-left: 1.1rem; }
-  ul.plain li { margin-bottom: .3rem; }
-
-  footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }
-
-  @media print {
-    :root { --bg: #fff; --ink: #000; --muted: #444; --accent: #000; --rule: #bbb; --soft: #fff; }
-    main { padding: 0; }
-    .no-print { display: none; }
-    .job, .role { break-inside: avoid; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<script>
+  try { document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark"; }
+  catch { document.documentElement.dataset.theme = "dark"; }
+</script>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<main>
-
-<header>
-  <h1>James Van Nguyen</h1>
-  <p class="title">Kubernetes Escalation Engineer</p>
-  <ul class="links">
-    <li><a href="mailto:jamesvannguyen@outlook.com">jamesvannguyen@outlook.com</a></li>
-    <li><a href="https://linkedin.com/in/jamesvnguyen">LinkedIn</a></li>
-    <!-- Replace YOUR-USERNAME with your GitHub username -->
+<div class="layout">
+<aside class="sidebar">
+  <a class="monogram" href="./" aria-label="Home">JN</a>
+  <p class="name"><a href="./">James Van Nguyen</a></p>
+  <p class="role">Kubernetes Escalation Engineer</p>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="./" aria-current="page">Articles</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="https://github.com/jamesvnguyen/k8s-tooling-101">Training repo</a></li>
+    </ul>
+  </nav>
+  <ul class="social">
     <li><a href="https://github.com/jamesvnguyen">GitHub</a></li>
-    <li class="no-print"><a href="James_Nguyen_Resume.pdf" download>Download Resume</a></li>
+    <li><a href="https://linkedin.com/in/jamesvnguyen">LinkedIn</a></li>
+    <li><a href="mailto:jamesvannguyen@outlook.com">Email</a></li>
   </ul>
-</header>
+  <button class="theme-toggle" type="button" id="theme-toggle">Light mode</button>
+</aside>
+<main class="content">
+  <header class="page-head">
+    <h1>Articles</h1>
+    <p class="lede">Kubernetes, Rancher, and DevSecOps lessons from the support trenches.</p>
+  </header>
+  <div id="articles"><p class="status">Loading articles…</p></div>
 
-<section aria-labelledby="profile">
-  <h2 id="profile">Profile</h2>
-  <p>7+ years in DevSecOps, Rancher / RKE2, and AWS. I resolve high-severity production Kubernetes issues for 50+ enterprise customers in healthcare, finance, and energy.</p>
-</section>
-
-<section aria-labelledby="experience">
-  <h2 id="experience">Experience</h2>
-
-  <div class="job">
-    <p class="company">SUSE</p>
-    <p class="meta">Los Angeles, CA</p>
-
-    <div class="role">
-      <h3>Kubernetes Escalation Engineer</h3>
-      <p class="when">Sept 2026 – Present</p>
-      <ul class="points">
-        <li>Technical escalation point for high-severity Kubernetes and Rancher issues, running root cause analysis across networking, etcd, control plane, and workloads while meeting SLAs.</li>
-        <li>Diagnose performance degradation, node instability, and CNI, DNS, and ingress failures in production Rancher / RKE2 environments.</li>
-        <li>Reproduce and document product defects with engineering, write knowledge base articles and runbooks, and mentor support engineers.</li>
-      </ul>
-    </div>
-
-    <div class="role">
-      <h3>Kubernetes Support Engineer</h3>
-      <p class="when">May 2024 – Sept 2026</p>
-      <ul class="points">
-        <li>Supported 50+ enterprise customers on RKE, RKE2, K3s, and EKS, advising on HA, security hardening, RBAC, and network segmentation.</li>
-        <li>Guided customers through CIS benchmark hardening for RKE2 and NeuVector deployments for vulnerability scanning and runtime protection.</li>
-        <li>Helped customers adopt GitOps, infrastructure as code, secrets management, and observability with Prometheus and Grafana.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="job">
-    <p class="company">Eviden</p>
-    <p class="meta">Chicago, IL</p>
-    <div class="role">
-      <h3>Senior DevOps Engineer</h3>
-      <p class="when">Sept 2021 – June 2024</p>
-      <ul class="points">
-        <li>Architected a Terraform / Rancher deployment that saved a financial institution over $500K in AWS costs.</li>
-        <li>Built a Jenkins CI/CD pipeline with SonarQube scanning that cut deployment time in half.</li>
-        <li>Helped migrate a medical institution from Terraform Enterprise to Crossplane for automated GCP provisioning.</li>
-        <li>Integrated ArgoCD with Azure DevOps for a GitOps delivery workflow with faster rollbacks.</li>
-        <li>Expanded HashiCorp Vault and deployed the Vault Sidecar Injector via Helm to integrate Kubernetes clusters.</li>
-        <li>Built reusable Terraform modules and a private registry for provisioning AWS resources across teams.</li>
-        <li>Mentored junior engineers and wrote 20+ technical guides that onboarded 15+ teams to Terraform, Kubernetes, and Vault.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="job">
-    <p class="company">Nexient</p>
-    <p class="meta">Ann Arbor, MI</p>
-    <div class="role">
-      <h3>DevOps Engineer II</h3>
-      <p class="when">Jan 2019 – Sept 2021</p>
-      <ul class="points">
-        <li>Built a fault-tolerant, highly available multi-cloud Azure / AWS deployment system for a gas and energy company.</li>
-        <li>Automated self-service frontend releases with Bash, Python, AWS CodeBuild, and CodePipeline.</li>
-        <li>Automated CloudFront and S3 site management with CloudFormation and Lambda, including Lambda@Edge redirects.</li>
-        <li>Implemented Elasticsearch and Kibana for real-time server monitoring and troubleshooting.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section aria-labelledby="skills">
-  <h2 id="skills">Skills</h2>
-  <dl class="skills">
-    <dt>Kubernetes</dt><dd>Kubernetes, Rancher, RKE2, K3s, EKS, Helm, Kustomize</dd>
-    <dt>Cloud</dt><dd>AWS, GCP</dd>
-    <dt>Infrastructure as code</dt><dd>Terraform, Sentinel, CloudFormation, Crossplane</dd>
-    <dt>CI/CD</dt><dd>ArgoCD, GitOps, Jenkins, Azure DevOps, AWS CodePipeline</dd>
-    <dt>Security</dt><dd>NeuVector, Kubewarden, Trivy, SonarQube, AWS GuardDuty, AWS WAF</dd>
-    <dt>Secrets</dt><dd>HashiCorp Vault, AWS Secrets Manager, AWS Parameter Store</dd>
-    <dt>Observability</dt><dd>Prometheus, Grafana, Elasticsearch, Kibana</dd>
-    <dt>Registries</dt><dd>Harbor, JFrog Artifactory</dd>
-    <dt>Config management</dt><dd>Ansible, Chef</dd>
-    <dt>Linux &amp; scripting</dt><dd>SLES, RHEL, Ubuntu, Bash, Python</dd>
-    <dt>Compliance</dt><dd>DevSecOps, HIPAA, PCI DSS</dd>
-  </dl>
-</section>
-
-<section aria-labelledby="certs">
-  <h2 id="certs">Certifications</h2>
-  <ul class="plain">
-    <li>Certified Kubernetes Administrator (CKA)</li>
-    <li>Kubernetes and Cloud Native Security Associate (KCSA)</li>
-    <li>Kubernetes and Cloud Native Associate (KCNA)</li>
-    <li>HashiCorp Certified: Terraform Associate</li>
-    <li>AWS Certified Cloud Practitioner</li>
-  </ul>
-</section>
-
-<section aria-labelledby="education">
-  <h2 id="education">Education</h2>
-  <p><strong>University of Michigan</strong><br>B.S. Biomolecular Science and English Language and Literature</p>
-</section>
-
-<footer>
-  <p>Contact me at <a href="mailto:jamesvannguyen@outlook.com">jamesvannguyen@outlook.com</a></p>
-</footer>
-
+  <h2 class="section-title">Recent activity</h2>
+  <div id="activity"><p class="status">Loading…</p></div>
 </main>
+</div>
+<script src="assets/site.js"></script>
 </body>
 </html>
